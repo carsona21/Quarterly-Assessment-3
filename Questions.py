@@ -81,8 +81,6 @@ for qa in qa_list:
 conn.close()
 
 
-import sqlite3
-
 # Connect to SQLite database (it will create the file if it doesn't exist)
 conn = sqlite3.connect('qa_database.db')
 
@@ -155,7 +153,6 @@ for qa in qa_list:
 # Close the connection
 conn.close()
 
-import sqlite3
 
 # Connect to SQLite database (it will create the file if it doesn't exist)
 conn = sqlite3.connect('qa_database.db')
@@ -229,7 +226,6 @@ for qa in qa_list:
 # Close the connection
 conn.close()
 
-import sqlite3
 
 # Connect to SQLite database (it will create the file if it doesn't exist)
 conn = sqlite3.connect('qa_database.db')
@@ -303,7 +299,6 @@ for qa in qa_list:
 # Close the connection
 conn.close()
 
-import sqlite3
 
 # Connect to SQLite database (it will create the file if it doesn't exist)
 conn = sqlite3.connect('qa_database.db')
