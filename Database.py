@@ -6,9 +6,9 @@ conn = sqlite3.connect('qa_database.db')
 # Create a cursor object
 cursor = conn.cursor()
 
-# Create a table to store questions and answers
+# Create a table to store questions and answers with the name ACCT2110
 cursor.execute('''
-CREATE TABLE IF NOT EXISTS qa_table (
+CREATE TABLE IF NOT EXISTS ACCT2110 (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     question TEXT NOT NULL,
     answer TEXT NOT NULL
@@ -18,13 +18,13 @@ CREATE TABLE IF NOT EXISTS qa_table (
 # Function to insert a new question and answer
 def insert_qa(question, answer):
     cursor.execute('''
-    INSERT INTO qa_table (question, answer) VALUES (?, ?)
+    INSERT INTO ACCT2110 (question, answer) VALUES (?, ?)
     ''', (question, answer))
     conn.commit()
 
 # Function to retrieve all questions and answers
 def get_all_qa():
-    cursor.execute('SELECT * FROM qa_table')
+    cursor.execute('SELECT * FROM ACCT2110')
     return cursor.fetchall()
 
 # Example usage
